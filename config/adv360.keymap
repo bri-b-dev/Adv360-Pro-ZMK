@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &kp LGUI &kp R &delay 100 &text "terminal" &kp ENTER  // Beispiel für Windows (Windows + "Terminal")
+                &kp LGUI &kp R &delay 100 &text "terminal" &kp ENTER  // Beispiel für Windows (Windows + Terminal)
             >;
             label = "Terminal";
         };
@@ -66,7 +66,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &kp LGUI &kp SPACE &delay 100 &text "iterm" &kp ENTER // macOS: Spotlight -> "iterm"
+                &kp LGUI &kp SPACE &delay 100 &text "iterm" &kp ENTER // macOS: Spotlight -> iterm
             >;
             label = "Terminal";
         };
