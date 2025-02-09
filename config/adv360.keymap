@@ -32,14 +32,6 @@
     };
 
     macros {
-        macro_open_terminal: macro_open_terminal {
-            compatible = "zmk,behavior-macro";
-            bindings = <
-                &if_os WINS  &kp LGUI &kp R &delay 100 &text "wt" &kp ENTER   // Windows Terminal
-                &if_os LINUX &kp LCTRL &kp LALT &kp T                          // Linux: Ctrl + Alt + T
-                &if_os MACOS &kp LGUI &kp SPACE &delay 100 &text "Terminal" &kp ENTER // macOS: Spotlight -> Terminal
-            >;
-        };
     };
 
     keymap {
