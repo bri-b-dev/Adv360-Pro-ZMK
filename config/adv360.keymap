@@ -47,27 +47,21 @@
         open_terminal_linux: open_terminal_linux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LCTRL &kp LALT &kp T  // Beispiel für Linux (Ctrl + Alt + T)
-            >;
+            bindings = <&kp LCTRL &kp LALT &kp T>;
             label = "Terminal";
         };
 
         open_terminal_windows: open_terminal_windows {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LGUI &kp R &delay 100 &text "terminal" &kp ENTER  // Beispiel für Windows (Windows + Terminal)
-            >;
+            bindings = <&kp LGUI &kp T &kp E &kp R &kp M &kp I &kp N &kp A &kp L &kp ENTER>;
             label = "Terminal";
         };
 
         open_terminal_mac: open_terminal_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp LGUI &kp SPACE &delay 100 &text "iterm" &kp ENTER // macOS: Spotlight -> iterm
-            >;
+            bindings = <&kp LGUI &kp SPACE &kp I &kp T &kp E &kp R &kp M &kp ENTER>;
             label = "Terminal";
         };
     };
@@ -111,11 +105,11 @@
         mod {
             display-name = "Mod";
             bindings = <
-&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none         &open_terminal_mac         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &studio_unlock   &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &none                                                  &trans           &none  &none       &none       &none  &none  &none
+&none           &none         &none         &none         &none         &open_terminal_mac  &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
+&studio_unlock  &none         &none         &none         &none         &none               &none        &none  &none      &bt BT_CLR  &none       &studio_unlock   &none  &none       &none       &none  &none  &none
+&none           &none         &none         &none         &macro_ver    &none                                   &none      &none                                    &none  &none       &none       &none  &none  &none
+&none           &none         &none         &none         &none                             &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
 
